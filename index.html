@@ -27,16 +27,20 @@
       var pos = 0;
       var id = setInterval(frame, 5);
       function frame() {
-        if (pos == 350) {
-          clearInterval(id);
+         
+        if (pos === 350) {
+          pos--;
+          elem.style.top = pos - "px";
+          elem.style.left = pos - "px";  
+         // clearInterval(id);
         } else {
           pos++;
           elem.style.top = pos + "px";
           elem.style.left = pos + "px";
         }
-      }
     }
 
+    }
    
   </script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
